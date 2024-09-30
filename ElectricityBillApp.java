@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 class ElectricityBill {
-    // Instance variables
+
     private String consumerNo;
     private String consumerName;
     private double previousReading;
     private double currentReading;
     private String connectionType;
 
-    // Constructor to initialize the instance variables
+
     public ElectricityBill(String consumerNo, String consumerName, double previousReading,
                            double currentReading, String connectionType) {
         this.consumerNo = consumerNo;
@@ -18,7 +18,7 @@ class ElectricityBill {
         this.connectionType = connectionType;
     }
 
-    // Method to compute the bill amount
+
     public double computeBill() {
         if (currentReading < previousReading) {
             System.out.println("Error: Current month reading cannot be less than previous month reading.");
@@ -28,11 +28,11 @@ class ElectricityBill {
         double unitsConsumed = currentReading - previousReading;
         double billAmount = 0;
 
-        // Define tariff rates based on connection type
-        double domesticRate = 5.0;     // Rate per unit for domestic
-        double commercialRate = 8.0;   // Rate per unit for commercial
+        
+        double domesticRate = 5.0;    
+        double commercialRate = 8.0;   
 
-        // Calculate the bill amount based on connection type
+        
         if (connectionType.equalsIgnoreCase("domestic")) {
             billAmount = unitsConsumed * domesticRate;
         } else if (connectionType.equalsIgnoreCase("commercial")) {
@@ -45,7 +45,7 @@ class ElectricityBill {
         return billAmount;
     }
 
-    // Method to display the bill
+    
     public void displayBill() {
         System.out.println("\nElectricity Bill");
         System.out.println("-----------------");
@@ -63,7 +63,7 @@ public class ElectricityBillApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Input consumer details
+    
         System.out.print("Enter Consumer Number: ");
         String consumerNo = scanner.nextLine();
 
@@ -76,16 +76,14 @@ public class ElectricityBillApp {
         System.out.print("Enter Current Month Reading: ");
         double currentReading = scanner.nextDouble();
 
-        scanner.nextLine(); // Consume newline left-over
+        scanner.nextLine(); 
         System.out.print("Enter Type of EB Connection (domestic/commercial): ");
         String connectionType = scanner.nextLine();
 
-        // Create an ElectricityBill object
+    
         ElectricityBill bill = new ElectricityBill(consumerNo, consumerName, previousReading, currentReading, connectionType);
-
-        // Display the bill
+        
         bill.displayBill();
 
-        scanner.close();
     }
 }
