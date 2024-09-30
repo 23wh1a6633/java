@@ -18,15 +18,15 @@ class CurrencyConverter extends ConverterBase
         
         double amount, convertedAmount;
 
-        if (choice == 1) { // Dollar to INR
+        if (choice == 1) { 
             System.out.print("Enter amount in Dollar: ");
             amount = scanner.nextDouble();
-            convertedAmount = amount * 83.0; // Example conversion rate
+            convertedAmount = amount * 83.0; 
             System.out.println(amount + " Dollar = " + convertedAmount + " INR");
-        } else if (choice == 2) { // INR to Dollar
+        } else if (choice == 2) { 
             System.out.print("Enter amount in INR: ");
             amount = scanner.nextDouble();
-            convertedAmount = amount / 83.0; // Example conversion rate
+            convertedAmount = amount / 83.0; 
             System.out.println(amount + " INR = " + convertedAmount + " Dollar");
         } else {
             System.out.println("Invalid choice.");
@@ -45,12 +45,12 @@ class DistanceConverter extends ConverterBase {
 
         double distance, convertedDistance;
 
-        if (choice == 1) { // Meter to KM
+        if (choice == 1) { 
             System.out.print("Enter distance in meters: ");
             distance = scanner.nextDouble();
             convertedDistance = distance / 1000;
             System.out.println(distance + " meters = " + convertedDistance + " KM");
-        } else if (choice == 2) { // KM to Meter
+        } else if (choice == 2) {
             System.out.print("Enter distance in KM: ");
             distance = scanner.nextDouble();
             convertedDistance = distance * 1000;
@@ -72,12 +72,12 @@ class TimeConverter extends ConverterBase {
 
         double time, convertedTime;
 
-        if (choice == 1) { // Hours to Minutes
+        if (choice == 1) { 
             System.out.print("Enter time in hours: ");
             time = scanner.nextDouble();
             convertedTime = time * 60;
             System.out.println(time + " hours = " + convertedTime + " minutes");
-        } else if (choice == 2) { // Minutes to Hours
+        } else if (choice == 2) {
             System.out.print("Enter time in minutes: ");
             time = scanner.nextDouble();
             convertedTime = time / 60;
