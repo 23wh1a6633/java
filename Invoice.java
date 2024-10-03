@@ -23,8 +23,8 @@ class Invoice
     public void displayInvoice() 
     {
         System.out.println("\nInvoice:");
-        System.out.println("Part Number: " + partNumber);
-        System.out.println("Part Description: " + partDescription);
+        System.out.println("Number: " + partNumber);
+        System.out.println("Description: " + partDescription);
         System.out.println("Quantity: " + quantity);
         System.out.println("Price per Item: " + pricePerItem);
         System.out.println("Total Invoice Amount: " + getInvoiceAmount());
@@ -34,10 +34,10 @@ class Invoice
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter Part Number: ");
+        System.out.print("Enter Number: ");
         String partNumber = scanner.nextLine();
 
-        System.out.print("Enter Part Description: ");
+        System.out.print("Enter Description: ");
         String partDescription = scanner.nextLine();
 
         System.out.print("Enter Quantity: ");
